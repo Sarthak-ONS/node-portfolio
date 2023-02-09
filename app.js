@@ -1,5 +1,6 @@
 const express = require('express')
 const path = require('path')
+const bodyParser = require('body-parser')
 
 const app = express()
 
@@ -9,6 +10,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
+
+app.use(bodyParser.urlencoded({extended : false}))
 
 
 app.get('/', (req, res, next) => {
@@ -24,6 +27,24 @@ app.get('/projects', (req, res, next) => {
     res.render('projects', {
         pageTitle: 'Projects', path: '/projects'
     })
+})
+
+app.get('/contact', (req, res, next) => {
+    console.log('Requesting Contact Form');
+    res.render('form-contact', {
+        pageTitle: 'Contact Me', path: '/contact'
+    })
+})
+
+app.post('/contact', (req, res, next) => {
+    const person = {
+        name: req.body.name,
+        email: req.body.email,
+        message: req.body.message,
+        subject: req.body.subject
+    }
+    
+    console.log(person);
 })
 
 app.listen(PORT, () => {

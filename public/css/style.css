@@ -293,3 +293,8 @@ a {
 .my-float {
     margin-top: 20px;
 }
+
+.footer-copyright-image {
+    height: 15px;
+    width: 15px;
+}
