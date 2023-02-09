@@ -237,6 +237,7 @@ h6 {
 .card-subtitle {
     font-family: Poppins;
     font-size: small;
+    font-style: italic;
 
 }
 
@@ -244,6 +245,19 @@ h6 {
     font-family: Poppins;
     font-size: small;
 
+}
+
+.card-button {
+    border-radius: 10px;
+    padding: 4px 8px;
+    border: none;
+    background-color: #1A73E8;
+    color: white;
+    font-size: 14px;
+}
+
+.card-button a {
+    color: white;
 }
 
 .unk {
@@ -258,4 +272,24 @@ a {
 .blog-img {
     width: 270px;
     height: 180px;
+}
+
+
+
+
+.float {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #1A73E8;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+}
+
+.my-float {
+    margin-top: 20px;
 }
