@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;900&family=Poppins&family=Ubuntu:wght@300;400;700&display=swap');
+
+
+body {
+    /* margin: 0rem 10rem; */
+    font-family: 'Poppins';
+}
+
+.person-title {
+    font-family: inherit;
+    font-weight: 900;
+}
+
+.person-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    /* margin: 40px; */
+    /* align-items: left; */
+    /* position: relative; */
+    left: 320px;
+}
+
+@media (min-width: 768px) {
+    .person-img {
+        position: absolute
+    }
+}
+
+
+@media(max-width: 768px) {
+    .flutter-margin-adjuster {
+        display: none;
+    }
+}
+
+.profile-img {
+    justify-content: left;
+}
+
+.main-body {
+    text-align: left;
+    margin-top: 1rem;
+}
+
+p {
+    /* padding:20px ; */
+    text-align: left;
+}
+
+.copyright {
+    margin-left: 10px;
+}
+
+.resume {
+    margin-right: 7px;
+}
+
+/* .skillset {
+    list-style: none;
+    display: flex;
+    background-color: grey;
+} */
+
+.favmargin {
+    padding-right: 15px;
+    background-color: blanchedalmond;
+    height: 40px;
+    align-items: center;
+}
+
+
+.custom-chip {
+    border-radius: 50%;
+}
+
+/* .chips{
+    display: flex;
+    float: left;
+    flex-direction: row;
+} */
+.chip {
+    display: inline-block;
+    margin-right: 20px;
+    background-color: rgb(212, 133, 133);
+    height: 50px;
+    padding: 10px 20px;
+    border-radius: 50%;
+
+}
+
+.chip {
+    display: inline-flex;
+    flex-direction: row;
+    background-color: whitesmoke;
+    border: none;
+    cursor: default;
+    height: 36px;
+    outline: none;
+    padding: 0;
+    font-size: 14px;
+    margin: 5px 5px;
+    font-family: "Open Sans", sans-serif;
+    white-space: nowrap;
+    align-items: center;
+    border-radius: 16px;
+    vertical-align: middle;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.chip-head {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    background-color: whitesmoke;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    align-items: center;
+    user-select: none;
+    border-radius: 50%;
+    justify-content: center;
+    width: 36px;
+    color: #fff;
+    height: 36px;
+    font-size: 20px;
+    margin-right: -4px;
+}
+
+.chip-content {
+    cursor: inherit;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    white-space: nowrap;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.chip-svg {
+    color: #ffffff;
+    cursor: pointer;
+    height: auto;
+    margin: 4px 4px 0 -8px;
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    font-size: 24px;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    user-select: none;
+    flex-shrink: 0;
+}
+
+.favmar {
+    color: black;
+}
+
+.chip-svg:hover {
+    color: #666666;
+}
+
+.contact-icons {
+    margin-top: 25px;
+}
+
+.contact-icon {
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+}
+
+/* Tech Section CSS Code */
+
+.tech-section-outer-container {
+    text-align: left;
+    padding: 0;
+}
+
+.tech-section-outer-container h6 {
+    font-weight: 600;
+
+}
+
+
+.small-container-inner-tech-section img {
+    height: 20px;
+    width: 20px;
+}
+
+.flutter-margin-adjuster {
+    display: none;
+}
+
+h6 {
+    /* padding-bottom: 2px; */
+}
+
+.margin-helper {
+    margin: 50px 0px
+}
+
+
+
+.card {
+    margin-bottom: 20px;
+    /* margin-left: 5%; */
+    /* padding:0; */
+    /* align-items: center; */
+    padding: 2%;
+    /* box-shadow: #666666; */
+    box-shadow: 0 0 5px 5px #DEFCF9;
+}
+
+
+.card-body {
+    padding: 0;
+}
+
+.project-section {
+    padding: 0;
+    justify-content: center;
+}
+
+.card-text {
+    font-family: Poppins;
+    font-size: small;
+
+}
+
+.card-title {
+    font-family: Poppins;
+    font-size: medium;
+
+}
+
+.card-subtitle {
+    font-family: Poppins;
+    font-size: small;
+
+}
+
+.card-link {
+    font-family: Poppins;
+    font-size: small;
+
+}
+
+.unk {
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+}
+
+.blog-img {
+    width: 270px;
+    height: 180px;
+}
