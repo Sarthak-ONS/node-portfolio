@@ -18,6 +18,14 @@ app.get('/', (req, res, next) => {
     })
 })
 
+app.get('/projects', (req, res, next) => {
+    console.log("Requesting Projects");
+
+    res.render('projects', {
+        pageTitle: 'Projects', path: '/projects'
+    })
+})
+
 app.listen(PORT, () => {
     console.log(`App is running on Port=${PORT}`);
 })
