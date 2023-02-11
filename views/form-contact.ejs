@@ -7,7 +7,7 @@
             <br><br>
             <div class="formbold-main-wrapper">
                 <div class="formbold-form-wrapper">
-                    <form action="/contact" method="POST">
+                    <form id="contact-form " action="/contact" method="POST">
                         <div class="formbold-mb-5">
                             <label for="name" class="formbold-form-label"> Full Name </label>
                             <input required type="text" name="name" id="name" placeholder="Full Name"
@@ -33,7 +33,7 @@
                         </div>
 
                         <div>
-                            <button class="formbold-btn">Submit</button>
+                            <button class="formbold-btn" onclick="formSubmit()">Submit</button>
                         </div>
                     </form>
                 </div>

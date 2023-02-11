@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-app.use(bodyParser.urlencoded({extended : false}))
+app.use(bodyParser.urlencoded({ extended: false }))
 
 
 app.get('/', (req, res, next) => {
@@ -43,8 +43,15 @@ app.post('/contact', (req, res, next) => {
         message: req.body.message,
         subject: req.body.subject
     }
-    
+
     console.log(person);
+    res.render('email-success', { pageTitle: 'Sarthak Agarwal', path: '/email-success' })
+})
+
+app.use((req, res, next) => {
+    res.render('404', {
+        pageTitle: 'Page Not Found', path: '/404'
+    })
 })
 
 app.listen(PORT, () => {
