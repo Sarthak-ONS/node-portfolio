@@ -1,8 +1,13 @@
+'use strict'
+
 const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
 
 const app = express()
+const serverless = require('serverless-http');
+
+const router = express.Router()
 
 const PORT = process.env.PORT | 4000
 
@@ -14,14 +19,13 @@ app.set('views', 'views');
 app.use(bodyParser.urlencoded({ extended: false }))
 
 
-app.get('/', (req, res, next) => {
-    console.log("req on home");
+router.get('/', (req, res, next) => {
     res.render('home', {
         pageTitle: 'Sarthak Agarwal', path: '/'
     })
 })
 
-app.get('/projects', (req, res, next) => {
+router.get('/projects', (req, res, next) => {
     console.log("Requesting Projects");
 
     res.render('projects', {
@@ -29,14 +33,14 @@ app.get('/projects', (req, res, next) => {
     })
 })
 
-app.get('/contact', (req, res, next) => {
+router.get('/contact', (req, res, next) => {
     console.log('Requesting Contact Form');
     res.render('form-contact', {
         pageTitle: 'Contact Me', path: '/contact'
     })
 })
 
-app.post('/contact', (req, res, next) => {
+router.post('/contact', (req, res, next) => {
     const person = {
         name: req.body.name,
         email: req.body.email,
@@ -48,12 +52,13 @@ app.post('/contact', (req, res, next) => {
     res.render('email-success', { pageTitle: 'Sarthak Agarwal', path: '/email-success' })
 })
 
-app.use((req, res, next) => {
+router.use((req, res, next) => {
     res.render('404', {
         pageTitle: 'Page Not Found', path: '/404'
     })
 })
 
-app.listen(PORT, () => {
-    console.log(`App is running on Port=${PORT}`);
-})
+app.use('/.netlify/functions/server', router);
+
+module.exports = app;
+module.exports.handler = serverless(app);
